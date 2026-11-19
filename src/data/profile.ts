@@ -10,8 +10,8 @@
  */
 
 export const profile = {
-  name: "Your Name",
-  initials: "YN",
+  name: "Shankar HV",
+  initials: "SH",
   roles: [
     "Full-Stack Developer",
     "UI Engineer",
@@ -23,14 +23,14 @@ export const profile = {
     "Freelance developer helping startups, creators & small businesses turn ideas into polished, high-converting websites and apps — on time and without the agency price tag.",
   location: "India · Working worldwide",
   available: true,
-  email: "hello@yourdomain.com",
-  calendly: "https://calendly.com/your-handle", // or any booking link
-  resume: "#",
+  email: "vedashankar.hv@gmail.com",
+  phone: "+91 63614 76705",
+  /** "Book a free call" button — opens a WhatsApp chat with a ready-made message. Swap for a Calendly link if you get one. */
+  booking: "https://wa.me/916361476705?text=Hi%20Shankar%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
   socials: {
-    github: "https://github.com/your-handle",
-    linkedin: "https://linkedin.com/in/your-handle",
-    twitter: "https://x.com/your-handle",
-    upwork: "https://www.upwork.com/freelancers/your-handle",
+    github: "https://github.com/shankar-hv",
+    linkedin: "https://www.linkedin.com/in/hvshankar17/",
+    twitter: "https://x.com/shankarhv17",
   },
 };
 

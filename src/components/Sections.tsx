@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowUpRight, Calendar, Check, Copy, ExternalLink, Gauge, LayoutDashboard,
-  Mail, MapPin, Menu, Quote, Rocket, ShoppingBag, Sparkles, X, type LucideIcon,
+  Mail, MapPin, MessageCircle, Menu, Phone, Quote, Rocket, ShoppingBag, Sparkles, X, type LucideIcon,
 } from "lucide-react";
 import { profile, projects, process, services, stack, stats, testimonials, type Project } from "../data/profile";
 import { CountUp, Magnetic, Reveal, SectionTitle, TiltCard, Typewriter } from "./Effects";
-import { GithubIcon, LinkedinIcon, UpworkIcon, XIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, XIcon } from "./Icons";
 
 const ICONS: Record<string, LucideIcon> = { Rocket, LayoutDashboard, ShoppingBag, Gauge };
 const COLOR: Record<string, string> = {
@@ -16,7 +16,6 @@ const SOCIALS = [
   { href: profile.socials.github, Icon: GithubIcon, label: "GitHub" },
   { href: profile.socials.linkedin, Icon: LinkedinIcon, label: "LinkedIn" },
   { href: profile.socials.twitter, Icon: XIcon, label: "X / Twitter" },
-  { href: profile.socials.upwork, Icon: UpworkIcon, label: "Upwork" },
 ];
 
 /* ───────────────────────── NAVBAR ───────────────────────── */
@@ -151,7 +150,7 @@ export function Hero() {
             </a>
           </Magnetic>
           <Magnetic>
-            <a href={profile.calendly} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-magenta/60 px-7 py-4 font-bold text-magenta transition hover:bg-magenta/10 hover:shadow-[0_0_30px_#ff2bd666]">
+            <a href={profile.booking} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-magenta/60 px-7 py-4 font-bold text-magenta transition hover:bg-magenta/10 hover:shadow-[0_0_30px_#ff2bd666]">
               <Calendar className="h-5 w-5" /> Book a free call
             </a>
           </Magnetic>
@@ -440,6 +439,14 @@ export function Contact() {
                   {copied ? "Copied!" : profile.email}
                 </button>
               </Magnetic>
+            </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-3 font-mono text-sm">
+              <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 text-muted transition hover:text-cyan hover:drop-shadow-[0_0_8px_#00f0ff]">
+                <Phone className="h-4 w-4 text-cyan" /> {profile.phone}
+              </a>
+              <a href={profile.booking} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted transition hover:text-lime hover:drop-shadow-[0_0_8px_#b6ff3b]">
+                <MessageCircle className="h-4 w-4 text-lime" /> Chat on WhatsApp
+              </a>
             </div>
           </div>
         </div>
